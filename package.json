@@ -1,0 +1,85 @@
+{
+  "name": "spm-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "start:local": "env-cmd -f env/.env.dev.local next start",
+    "start:dev": "env-cmd -f env/.env.dev next dev",
+    "start:qa": "npx env-cmd -f env/.env.qa next dev",
+    "build:dev": "npx env-cmd -f env/.env.dev.local next build",
+    "build:test": "npx env-cmd -f env/.env.test next build",
+    "build-start:dev": "next build && env-cmd -f env/.env.dev next start",
+    "build": "next build",
+    "start": "node server.js",
+    "lint": "next lint",
+    "postinstall": "husky install",
+    "update:cl": "yarn add @cora/cora-component-library"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,json,html,md}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@cora/cora-component-library": "^0.1.77",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.17",
+    "@primer/octicons-react": "^15.2.0",
+    "@syncfusion/ej2-base": "^19.4.52",
+    "@syncfusion/ej2-data": "^19.4.54",
+    "@syncfusion/ej2-react-grids": "^19.4.56",
+    "axios": "^0.21.4",
+    "bootstrap": "5.1.1",
+    "clsx": "^1.1.1",
+    "font-awesome": "^4.7.0",
+    "formik": "^2.2.9",
+    "just-clone": "^5.0.1",
+    "next": "11.1.2",
+    "next-auth": "^3.29.0",
+    "next-intl": "^2.0.3",
+    "react": "17.0.2",
+    "react-bootstrap": "^2.0.0-rc.0",
+    "react-clone-referenced-element": "^1.1.1",
+    "react-dom": "17.0.2",
+    "react-redux": "^7.2.5",
+    "react-select": "^5.2.2",
+    "react-sortable-hoc": "^2.0.0",
+    "react-transition-group": "^4.4.2",
+    "redux": "^4.1.1",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.39.2",
+    "styled-components": "^5.3.3",
+    "swr": "^1.0.1",
+    "yar": "^19.4.52"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "2.0.0",
+    "@types/react": "^17.0.20",
+    "@typescript-eslint/eslint-plugin": "4.8.1",
+    "@typescript-eslint/parser": "4.8.1",
+    "env-cmd": "^10.1.0",
+    "eslint": "7.32.0",
+    "eslint-config-airbnb-typescript": "12.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "husky": "^7.0.2",
+    "jest": "^27.1.1",
+    "lint-staged": "10.5.1",
+    "prettier": "^2.4.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-prettier": "^1.2.0",
+    "stylelint-rational-order-plugin": "^1.0.2",
+    "typescript": "4.4.2"
+  }
+}

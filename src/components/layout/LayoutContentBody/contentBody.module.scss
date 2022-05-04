@@ -1,0 +1,43 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '@styles/abstracts/variables';
+
+.contentBody {
+  height: 100%;
+  margin-bottom: $spacer;
+}
+
+.contentBodyHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  color: $link-color-custom;
+}
+
+.contentBodyContainer {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 220px);
+  margin-bottom: 7px;
+  padding: $spacer $spacer * 2 $spacer  * 2 $spacer  * 2;
+  overflow: auto;
+
+  background-color: $white;
+  border-radius: 5px; 
+
+  .root {
+    width: 50%;
+  }
+}
+
+.contentBodyButtonsBottom {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+
+.requestContainer {
+  display: block;
+}

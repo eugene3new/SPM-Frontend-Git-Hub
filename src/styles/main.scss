@@ -1,0 +1,22 @@
+
+@import "./abstracts/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~@cora/cora-component-library/dist/css";
+
+html {
+  margin-bottom: 0;
+  
+  background-color: $gray-200;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Segoe UI', 'Segoe UI Regular', 'Segoe UI', sans-serif;
+}
+
+h1 {
+  margin-bottom: 0;
+
+  font-size: 22px;
+  // TODO - Set up font size variables
+}

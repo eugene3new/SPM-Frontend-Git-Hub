@@ -1,0 +1,39 @@
+{
+  "header": {
+    "wizard": "Wizard",
+    "timeline": "Timeline",
+    "login": "Login",
+    "main_menu": "Main menu",
+    "main_navigation": "Main navigation"
+  },
+  "title": {
+    "scenario_comparison": "Scenario comparison",
+    "welcome_to_cora_spm": "Welcome to Cora SPM",
+    "enterprise_setup": "Enterprise setup"
+  },
+  "footer": {
+    "save": "SAVE",
+    "previous": "PREVIOUS",
+    "save_and_next": "SAVE & NEXT",
+    "save_and_exit": "SAVE & EXIT"
+  },
+  "index": {
+    "title": "Start",
+    "description": "Diese Seite verwendet Übersetzungen aus <code>./messages/index/{locale}.json</code> und <code>./messages/shared/{locale}.json</code>. Übersetzungen von der Über-Seite und anderen Sprachen werden nicht geladen."
+  },
+  "wizard_setup": {
+    "enterprise": "Enterprise setup",
+    "strategy": "Strategy setup",
+    "portfolio": "Portfolio setup",
+    "entity": "Entity setup"
+  },
+  "enterprise_setup": {
+    "enterprise_details": "Enterprise Details",
+    "teritory_definition": "Teritory Definition",
+    "business_unit_definition": "Buisiness Unit Definition",
+    "functional_divisions_definition": "Functional Divisions Definition",
+    "enterprise_stakeholders": "Enterprise Stakeholders",
+    "resource_definition": "Resource Definition",
+    "set_up_custom_filters": "Set up Custom Filters"
+  }
+}

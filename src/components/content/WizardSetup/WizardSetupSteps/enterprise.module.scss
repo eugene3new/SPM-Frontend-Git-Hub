@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.progressSteps {
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  overflow-x: clip;
+
+  border: 1px solid var(--cora-green-very-light)
+}

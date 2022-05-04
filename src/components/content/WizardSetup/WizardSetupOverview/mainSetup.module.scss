@@ -1,0 +1,17 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.description {
+  max-width: 544px;
+  margin-bottom: $spacer * 2;
+}
+
+.setupCard {
+  margin-bottom: $spacer * 2;
+}

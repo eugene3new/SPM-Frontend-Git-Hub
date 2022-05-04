@@ -1,0 +1,15 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.layoutContentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 56px;
+  padding-top: $spacer;
+  padding-bottom: calc(1rem - 5px);
+}
+
+.layoutContentActions {
+  display: flex;
+}

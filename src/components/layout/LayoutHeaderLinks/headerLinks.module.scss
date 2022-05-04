@@ -1,0 +1,29 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '../../../styles/abstracts/variables';
+
+.layoutHeaderLinks {
+  flex-grow: 1
+}
+
+.isVertical {
+  flex-direction: column;
+}
+
+.link {
+
+  a {
+    color: $link-color-custom;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.vertical {
+  flex-direction: column;
+}

@@ -1,0 +1,48 @@
+trigger:
+# - master
+# - feature/* # feature/feature-name. Use feature branches for all new features and bug fixes. users/toconnell/feature to implement
+# - release/* 
+- dev 
+
+pool: "Cora Build Agent Pool"
+
+variables:
+  placeholder: placeholder
+
+stages:
+- stage: Build
+  jobs:
+  - job: Build
+    timeoutInMinutes: 5 # Aim for less than five minutes
+    steps:
+    - task: NodeTool@0 
+      inputs:
+        versionSpec: '16.x'
+    
+    - script: |
+      npm install
+      npm run build
+    displayName: 'npm install and build'
+    # - task: Npm@1
+      # inputs:
+      # command: 'install'            # All up for question
+      
+    - script: yarn install
+    
+    - script: webpack # All in build for now
+        
+    # - script: |
+      # npm install
+      # npm run build
+    # displayName: 'npm install and build'
+    
+    
+    - task: CopyFiles@2
+      inputs:
+      Contents: 'build/**' # Pull the build directory (React)
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+    - task: PublishBuildArtifacts@1
+      inputs: 
+        PathtoPublish: $(Build.ArtifactStagingDirectory) # dist or build files
+        ArtifactName: 'www' # output artifact named www

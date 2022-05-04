@@ -1,0 +1,14 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+.mainContent {
+ 
+  margin-top: 90px;
+
+  background-color: $gray-200;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+}

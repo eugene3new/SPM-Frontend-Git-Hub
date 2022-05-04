@@ -1,0 +1,27 @@
+{
+  "plugins": ["@typescript-eslint", "prettier"],
+  "extends": ["@react-native-community", "airbnb-typescript", "plugin:@typescript-eslint/recommended", "prettier"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "arrow-body-style": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-var-requires": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/require-default-props": "off",
+    "global-require": "off",
+    "array-callback-return": "off",
+    "prefer-arrow-callback": "off"
+  }
+}

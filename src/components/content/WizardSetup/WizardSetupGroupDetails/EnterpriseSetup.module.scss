@@ -1,0 +1,19 @@
+.setupImageContainer {
+  padding: 40px 0 20px 0;
+}
+
+.setupImage {
+  height: 50px;
+}
+
+.setupContent {
+  color: rgba(0, 0, 0, 0.2);
+
+  .setupComplete {
+    text-transform: uppercase;
+    
+    .percentage {
+      color: #85898d;
+    }
+  }
+}

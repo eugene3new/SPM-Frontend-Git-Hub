@@ -1,0 +1,48 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.root {
+  max-height: 90px;
+  
+  background-color: $white;
+}
+
+.brand {
+  margin-right: 0;
+  @include media-breakpoint-up(sm) {
+
+    margin-right: 10px;
+  }
+}
+
+.drawerButton {
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+  outline: inherit;
+  cursor: pointer;
+}
+
+.content {
+  display: none;
+  @include media-breakpoint-up(sm) {
+
+    display: flex;
+    align-items: center;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  &:hover {
+    border: none;
+  }
+}
