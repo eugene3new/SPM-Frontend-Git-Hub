@@ -58,7 +58,7 @@
     "sass": "^1.39.2",
     "styled-components": "^5.3.3",
     "swr": "^1.0.1",
-    "yar": "^19.1.0"
+    "yar": "^9.1.0"
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "2.0.0",
