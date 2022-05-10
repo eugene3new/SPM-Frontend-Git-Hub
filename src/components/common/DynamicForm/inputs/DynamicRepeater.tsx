@@ -26,18 +26,5 @@ export const DynamicRepater = ({ columns, rows, data, handleAddRow, handleFieldC
     console.log('expand');
   };
 
-  return (
-    <RepeaterContainer>
-      <RepeaterHeader rows={rows} expandOnClick={onExpandClick} addRow={handleAddRow} />
-      <RepeaterSortableList
-        columns={columns}
-        onChildRowAdd={handleAddRow}
-        onRowRemove={handleRemoveRow}
-        onFieldChange={handleFieldChange}
-        lockAxis="y"
-        useDragHandle
-        data={data}
-      />
-    </RepeaterContainer>
-  );
+  return null;
 };
