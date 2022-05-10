@@ -57,39 +57,7 @@ export const Repeater: React.FC<IRepearProps> = ({
 
   const columnWidth = 100 / Object.keys(columnTemplate).length;
 
-  return (
-    <RepeaterContainer>
-      <RepeaterHeader
-        columnTemplate={columnTemplate}
-        handleCheckAll={handleCheckAll}
-        showCheckbox={showCheckbox}
-        showPosition={showPosition}
-        showExpand={showExpand}
-        columnWidth={columnWidth}
-        expandOnClick={expandOnClick}
-        showAdd={showAdd}
-        addRow={handleAddRow}
-      />
-      {stateRows.length > 0 && (
-        <RepeaterSortableList
-          rows={stateRows}
-          columnTemplate={columnTemplate}
-          handleCheckChanged={handleCheckChanged}
-          handleInputChanged={handleInputChanged}
-          handleSelectChanged={handleSelectChanged}
-          handleCreateOption={onCreateOption}
-          onSortEnd={onSortEnd}
-          lockAxis="y"
-          useDragHandle
-          columnWidth={columnWidth}
-          showCheckbox={showCheckbox}
-          showPosition={showPosition}
-          showReorder={showReorder}
-        />
-      )}
-      {stateRows.length === 0 && <EmptyRepeater>No Data to Display</EmptyRepeater>}
-    </RepeaterContainer>
-  );
+    return null;
 };
 
 export default Repeater;
