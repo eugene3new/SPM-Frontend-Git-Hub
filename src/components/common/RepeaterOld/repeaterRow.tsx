@@ -47,28 +47,7 @@ export const RepeaterSortableList = SortableContainer(
     if (!data) {
       return null;
     }
-    return (
-      <ul style={{ width: '100%' }}>
-        {data.map((column, index) => (
-          <RowContextProvider key={column.id}>
-            <SortableRow
-              onChildRowAdd={(parentId) => {
-                console.log(parentId);
-                onChildRowAdd(parentId);
-              }}
-              onRowRemove={(id) => {
-                onRowRemove(id);
-              }}
-              index={index}
-              key={column.id}
-              column={columns}
-              data={column}
-              onFieldChange={(id, name, value) => onFieldChange(id, name, value)}
-            />
-          </RowContextProvider>
-        ))}
-      </ul>
-    );
+    return null;
   }
 );
 
