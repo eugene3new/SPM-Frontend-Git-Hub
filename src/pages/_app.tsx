@@ -22,9 +22,7 @@ interface IAppProps<P = Record<string, unknown>> extends AppProps<P> {
 const App: React.FC<IAppProps> = ({ Component, pageProps, router }) => {
   return (
     <NextIntlProvider messages={pageProps.messages}>
-      {Component.isNotProtected ? (
-        <Component {...pageProps} />
-      ) : (
+      {(
         <AuthProvider session={pageProps.session}>
           <AuthGuard>
             <SWRNextAuthConfig>
