@@ -58,7 +58,6 @@ const NavBarOverflowMenu: React.FC<OverflowMenuProps> = ({ visibilityMap, childr
   return (
     <Dropdown role="navigation" aria-label="sub_navigation">
       <Dropdown.Toggle as={CustomToggle} id="dropdown-custom-components">
-        <FontAwesomeIcon icon={faEllipsisV} />
       </Dropdown.Toggle>
 
       <Dropdown.Menu as={CustomMenu} labeledBy="">
