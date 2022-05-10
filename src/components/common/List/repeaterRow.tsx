@@ -41,27 +41,7 @@ export const RepeaterSortableList = SortableContainer(
     showPosition: boolean;
     showReorder: boolean;
   }) => {
-    return (
-      <ul>
-        {rows.map((value, index) => (
-          <SortableRow
-            key={value.id}
-            index={index}
-            value={value}
-            columnTemplate={columnTemplate}
-            handleCheckChanged={handleCheckChanged}
-            handleInputChanged={handleInputChanged}
-            handleSelectChanged={handleSelectChanged}
-            handleCreateOption={handleCreateOption}
-            rowIndex={index}
-            columnWidth={columnWidth}
-            showCheckbox={showCheckbox}
-            showPosition={showPosition}
-            showReorder={showReorder}
-          />
-        ))}
-      </ul>
-    );
+    return null;
   }
 );
 
