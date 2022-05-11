@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components\\common",
+    "\\src\\components\\common\\NavBar",
+    "\\src\\components\\common\\RepeaterOld",
+    "\\src\\pages"
   ],
-  "SelectedNode": "\\C:\\Users\\ewalsh\\Source\\Repos\\spm-frontend",
+  "SelectedNode": "\\src\\pages\\_app.tsx",
   "PreviewInSolutionExplorer": false
 }
