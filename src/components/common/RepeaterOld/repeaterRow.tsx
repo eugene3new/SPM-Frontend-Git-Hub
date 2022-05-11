@@ -47,7 +47,28 @@ export const RepeaterSortableList = SortableContainer(
     if (!data) {
       return null;
     }
-    return null;
+    return (
+      <ul style={{ width: '100%' }}>
+        {data.map((column, index) => (
+          <RowContextProvider key={column.id}>
+            <SortableRow
+              onChildRowAdd={(parentId) => {
+                console.log(parentId);
+                onChildRowAdd(parentId);
+              }}
+              onRowRemove={(id) => {
+                onRowRemove(id);
+              }}
+              index={index}
+              key={column.id}
+              column={columns}
+              data={column}
+              onFieldChange={(id, name, value) => onFieldChange(id, name, value)}
+            />
+          </RowContextProvider>
+        ))}
+      </ul>
+    );
   }
 );
 
@@ -132,6 +153,83 @@ export const SortableRow = SortableElement(
     onChildRowAdd: (parentId: number | null) => void;
     onRowRemove: (id: number) => void;
   }) => {
-    return null;
+    return (
+      <RepeaterRow style={{ flexDirection: 'column' }}>
+        <div style={{ display: 'flex', flex: 1 }}>
+          <RepeaterCustomContainer>
+            {column.map((field, index) => {
+              switch (field.type) {
+                case 'Autocomplete':
+                  return (
+                    <RepeaterSelectCell width={100} key={field.name}>
+                      <CustomAutoComplete
+                        name={field.name}
+                        value={data.values[index]}
+                        onChange={(name, value) => {
+                          onFieldChange(data.id, name, value);
+                        }}
+                        onCreateOption={(selectedValue) => onFieldChange(data.id, field.name, selectedValue)}
+                        options={field.options || []}
+                      />
+                    </RepeaterSelectCell>
+                  );
+                case 'TextInput':
+                  return (
+                    <RepeaterCell width={100} key={field.name}>
+                      <CustomTextInput
+                        value={data.values[index]}
+                        onChange={(value) => {
+                          onFieldChange(data.id, field.name, value);
+                        }}
+                      />
+                    </RepeaterCell>
+                  );
+                default:
+                  return null;
+              }
+            })}
+          </RepeaterCustomContainer>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onChildRowAdd(data.id);
+            }}
+          >
+            <RepeaterHeaderIcon>
+              <PlusIcon size={26} />
+            </RepeaterHeaderIcon>
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onRowRemove(data.id);
+            }}
+          >
+            <RepeaterHeaderIcon>
+              <ArchiveIcon size={26} />
+            </RepeaterHeaderIcon>
+          </button>
+        </div>
+        {data.children && (
+          <div style={{ display: 'flex', flex: 1, marginLeft: 30 }}>
+            <RepeaterSortableList
+              lockAxis="y"
+              useDragHandle
+              onRowRemove={(id) => onRowRemove(id)}
+              onChildRowAdd={(parentId) => {
+                onChildRowAdd(parentId);
+              }}
+              columns={column}
+              data={data.children}
+              onFieldChange={(id, name, value) => {
+                onFieldChange(id, name, value);
+              }}
+            />
+          </div>
+        )}
+      </RepeaterRow>
+    );
   }
 );
